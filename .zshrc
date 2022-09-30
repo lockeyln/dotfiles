@@ -13,7 +13,7 @@ alias rm="trash"
 alias rr="trash-restore"
 alias nvim="/opt/nvim/bin/nvim"
 
-# export PATH=~/.npm-global/bin:$PATH
+export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.treesitter/tree-sitter:$PATH
 
 # 解决终端中文乱码
