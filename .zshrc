@@ -11,7 +11,7 @@ PS1='[\u@\h \W]\$ '
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias rm="trash"
 alias rr="trash-restore"
-alias nvim="/opt/nvim/bin/nvim"
+alias nvim="/usr/bin/nvim"
 
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.treesitter/tree-sitter:$PATH
