@@ -15,10 +15,10 @@ local config = {
     -- color_scheme = "Grape",
     -- color_scheme = "Firewatch",
     -- color_scheme = "Duotone Dark",
-    color_scheme = "Sakura",
+    -- color_scheme = "Sakura",
     -- color_scheme = "lovelace",
     -- color_scheme = "lovelace",
-    -- color_scheme = "Whimsy",
+    color_scheme = "Whimsy",
 
     enable_scroll_bar = true,
     exit_behavior = "Close",
