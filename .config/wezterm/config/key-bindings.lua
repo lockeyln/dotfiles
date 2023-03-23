@@ -4,7 +4,7 @@ return {
     {
         key = "Insert",
         mods = "SHIFT",
-        action = "Paste",
+        action = wezterm.action.PasteFrom('Clipboard')
     },
     {
         key = [[\]],
@@ -20,11 +20,11 @@ return {
             SplitVertical = { domain = "CurrentPaneDomain" },
         }),
     },
-    {
-        key = "q",
-        mods = "CTRL",
-        action = wezterm.action({ CloseCurrentPane = { confirm = false } }),
-    },
+    -- {
+    --     key = "q",
+    --     mods = "CTRL",
+    --     action = wezterm.action({ CloseCurrentPane = { confirm = false } }),
+    -- },
     {
         key = "h",
         mods = "CTRL|ALT",
@@ -65,7 +65,7 @@ return {
         mods = "CTRL|SHIFT|ALT",
         action = wezterm.action({ AdjustPaneSize = { "Down", 1 } }),
     },
-    { -- browser-like bindings for tabbing
+    {
         key = "t",
         mods = "CTRL",
         action = wezterm.action({ SpawnTab = "DefaultDomain" }),
@@ -177,5 +177,10 @@ return {
         key = "PageDown",
         mods = "CTRL | SHIFT",
         action = wezterm.action({ MoveTabRelative = 1 }),
+    },
+    {
+      key = 'n',
+      mods = 'SHIFT|CTRL',
+      action = wezterm.action.ToggleFullScreen,
     },
 }

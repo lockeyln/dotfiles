@@ -5,7 +5,7 @@ local launch_menu = require("config.launch-menu")
 local ssh_domains = require("config.ssh-domains")
 local shell = require("config.shell")
 require("config.right-status").setup()
-require("config.notify").setup()
+-- require("config.notify").setup()
 require("config.tab-title").setup()
 
 local font_primary = "FiraCode Nerd Font Mono"
