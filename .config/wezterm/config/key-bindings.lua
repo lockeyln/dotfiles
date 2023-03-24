@@ -77,11 +77,11 @@ return {
             DomainName = "WSL:Ubuntu",
         }),
     },
-    {
-        key = "w",
-        mods = "CTRL",
-        action = wezterm.action({ CloseCurrentTab = { confirm = false } }),
-    },
+    -- {
+    --     key = "w",
+    --     mods = "CTRL",
+    --     action = wezterm.action({ CloseCurrentTab = { confirm = false } }),
+    -- },
     {
         key = "Tab",
         mods = "CTRL",
