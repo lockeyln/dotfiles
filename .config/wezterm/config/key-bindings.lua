@@ -149,7 +149,7 @@ return {
         action = "DecreaseFontSize",
     },
     {
-        key = "l",
+        key = "t",
         mods = "ALT",
         action = wezterm.action.ShowLauncher,
     },
