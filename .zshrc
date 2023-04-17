@@ -15,6 +15,7 @@ alias rm="trash"
 alias rr="trash-restore"
 alias pip='pip3'
 alias cat='bat'
+
 # nvims
 alias nvim="/usr/bin/nvim"
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
@@ -37,7 +38,6 @@ bindkey -s ^a "nvims\n"
 
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.treesitter/tree-sitter:$PATH
-
 # 解决终端中文乱码
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -50,8 +50,6 @@ alias setproxy="export ALL_PROXY=socks5://127.0.0.1:7890; echo 'SET PROXY SUCCES
 alias unsetproxy="unset ALL_PROXY; echo 'UNSET PROXY SUCCESS!!!'"
 # 打开终端自动开启代理
 setproxy
-
-
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
