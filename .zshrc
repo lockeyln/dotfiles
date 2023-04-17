@@ -6,12 +6,16 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-alias ls='ls --color=auto'
+# 命令提示符(prompt sign) \u = username,\h = hostname,\W = current working directory
 PS1='[\u@\h \W]\$ '
+
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias ls='ls --color=auto'
 alias rm="trash"
 alias rr="trash-restore"
-
+alias pip='pip3'
+alias cat='bat'
+# nvims
 alias nvim="/usr/bin/nvim"
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
 alias nvim-kick="NVIM_APPNAME=kickstart nvim"
@@ -29,7 +33,6 @@ function nvims() {
   fi
   NVIM_APPNAME=$config nvim $@
 }
-
 bindkey -s ^a "nvims\n"
 
 export PATH=~/.npm-global/bin:$PATH
