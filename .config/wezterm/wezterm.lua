@@ -50,7 +50,7 @@ return {
     switch_to_last_active_tab_when_closing_tab = true,
 
     -- scroll bar
-    -- enable_scroll_bar = true,
+    enable_scroll_bar = true,
     scrollback_lines = 5000,
 
     -- status
