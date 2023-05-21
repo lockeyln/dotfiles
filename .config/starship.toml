@@ -1,87 +1,123 @@
-# Don't print a new line at the start of the prompt
-add_newline = false
-command_timeout = 500
+# Replace the "❯" symbol in the prompt with "➜"
+[character]
+success_symbol = "[➜](bold green)" 
+
+# Use custom format
+format = """
+[┌───────────────────](bold green)
+[│](bold green)$directory$rust$package
+[└─>](bold green) """
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
 
 [username]
-disabled = true
-[hostname]
-disabled = true
-[container]
-disabled = true
-
-[line_break]
+style_user = "green bold"
+style_root = "black bold"
+format = " [$user]($style) ~ "
 disabled = false
-
-[directory]
-truncation_length = 8       # 最长显示路径级别
-truncate_to_repo = false    # 在 git 目录下不截断路径
-style = "bold cyan"
-read_only = " "
-
-[kubernetes]
-format = "[$context:$namespace](blue) "
-disabled = false
-
-[character]
-success_symbol = "[](bold green)"
-error_symbol = "[](bold red)"
-
-[env_var]
-variable = "SHELL_PROXY"
-format = "[$env_value](blue)  "
+show_always = true
 
 [cmd_duration]
-min_time = 4_000              # 4000ms
-show_milliseconds = true
-style = "yellow"
+min_time = 500
+format = "took [$duration](bold yellow)"
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+style = "bold #f57800"
+read_only = "🔒"
+read_only_style = "red"
 
 [git_branch]
+format = "on [$symbol $branch ]($style)"
 symbol = " "
+style = "bold purple"
 
-[docker_context]
+[git_commit]
+#format = "[\\($hash\\)]($style) [\\($tag\\)]($style)"
+style = "bold green"
+
+[git_status]
+format ='([\[$all_status$ahead_behind\]]($style))'
+conflicted = "="
+ahead =	"⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count} "
+stashed = "$${count} "
+modified = "!${count} "
+staged = "+${count} "
+renamed = "»${count} "
+deleted = "✘${count} "
+style =	"bold red"
+disabled = false
+
+[git_state]
+rebase = "REBASING"
+merge =	"MERGING"
+revert = "REVERTING"
+cherry_pick = "CHERRY-PICKING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+style =	"bold yellow"
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+disabled = false
+
+[hg_branch]
+symbol = " "
+style =	"bold purple"
+format = "on [$symbol$branch]($style) "
+
+[memory_usage]
+format = "via $symbol [${ram}( | ${ram_pct})]($style)"
+symbol = " "
+style = "bold dimmed green"
+
+[nodejs]
+format = "via [$symbol$version]($style) "
+symbol = "⬢ "
+style = "bold green"
+disabled = false
+not_capable_style = "bold red"
+
+[status]
+format = "[$symbol$status]($style)"
+symbol = "✖"
+style = "bold red"
+disabled = true
+
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+
+[docker]
 symbol = " "
-disabled = true
 
-[package]
-symbol = " "
-disabled = true
-
-[aws]
-symbol = "  "
-disabled = true
-
-[gcloud]
-disabled = true
-
-[c]
-symbol = " "
+[conda]
+symbol = " "
 
 [dart]
 symbol = " "
 
-[elixir]
-symbol = " "
+[package]
+symbol = " "
 
-[golang]
-symbol = " "
+[perl]
+symbol = " "
 
-[haskell]
-symbol = " "
-
-[lua]
-symbol = " "
+[php]
+symbol = " "
 
 [python]
-symbol = " "
+symbol = " "
 
 [ruby]
-symbol = " "
+symbol = " "
 
 [rust]
 symbol = " "
 
-[nim]
-symbol = " "
-
-[nix_shell]
-symbol = " "
+[swift]
+symbol = "ﯣ "
