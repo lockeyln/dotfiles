@@ -9,6 +9,9 @@ fi
 # 命令提示符(prompt sign) \u = username,\h = hostname,\W = current working directory
 PS1='[\u@\h \W]\$ '
 
+eval "$(starship init zsh)"
+eval "$(lua /usr/share/z.lua/z.lua  --init zsh)"
+
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ls='ls --color=auto'
 alias rm="trash"
@@ -57,13 +60,11 @@ SAVEHIST=1000
 HISTFILE=~/.zsh_history
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme 
 source /usr/share/autojump/autojump.zsh
 
-eval "$(lua /usr/share/z.lua/z.lua  --init zsh)"
-eval "$(starship init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
