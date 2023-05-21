@@ -1,9 +1,12 @@
 local wezterm = require("wezterm")
-local keybindings = require("config.key-bindings")
-require("config.right-status").setup()
+local config = wezterm.config_builder()
+local keybindings = require("core.key-bindings")
+require("core.right-status").setup()
 
-return {
+
+config = {
     window_decorations = "RESIZE",
+    -- color_scheme_dirs = {'~/.config/wezterm/colors/'},
     color_scheme = "Dracula (Official)",
 
     -- font
@@ -43,7 +46,8 @@ return {
 
     -- tab bar
     enable_tab_bar = true,
-    hide_tab_bar_if_only_one_tab = false,
+    tab_bar_at_bottom = true,
+    hide_tab_bar_if_only_one_tab = true,
     use_fancy_tab_bar = false,
     tab_max_width = 25,
     show_tab_index_in_tab_bar = true,
@@ -58,9 +62,9 @@ return {
 
     -- window
     window_padding = {
-        left = 5,
-        right = 10,
-        top = 5,
+        left = 0,
+        right = 0,
+        top = 0,
         bottom = 0,
     },
     window_close_confirmation = "NeverPrompt",
@@ -69,3 +73,5 @@ return {
     -- window_background_opacity = 0.9,
     -- macos_window_background_blur = 20,
 }
+
+return config
