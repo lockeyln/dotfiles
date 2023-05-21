@@ -1,11 +1,17 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
-local keybindings = require("core.key-bindings")
-require("core.right-status").setup()
+local keybindings = require("core.keybinds")
 
+wezterm.on("update-right-status", function(window)
+    local date = wezterm.strftime("%Y-%m-%d %H:%M:%S ")
+    window:set_right_status(wezterm.format({
+        { Text = date },
+    }))
+end)
 
 config = {
-    window_decorations = "RESIZE",
+    window_decorations = "TITLE | RESIZE",
+    term = "xterm-256color",
     -- color_scheme_dirs = {'~/.config/wezterm/colors/'},
     color_scheme = "Dracula (Official)",
 
