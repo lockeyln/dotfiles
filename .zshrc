@@ -2,9 +2,10 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # 命令提示符(prompt sign) \u = username,\h = hostname,\W = current working directory
 PS1='[\u@\h \W]\$ '
@@ -13,7 +14,12 @@ eval "$(starship init zsh)"
 eval "$(lua /usr/share/z.lua/z.lua  --init zsh)"
 
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias ls='ls --color=auto'
+
+# alias ls='ls --color=auto'
+alias ls="lsd"
+alias la="lsd -a"
+alias ll="lsd -lh"
+alias lr="lsd -lR"
 alias rm="trash"
 alias rr="trash-restore"
 alias pip='pip3'
@@ -67,4 +73,4 @@ source /usr/share/autojump/autojump.zsh
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
