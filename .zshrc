@@ -24,6 +24,7 @@ alias rm="trash"
 alias rr="trash-restore"
 alias pip='pip3'
 alias cat='bat'
+alias lg="lazygit"
 
 # nvims
 alias nvim="/usr/bin/nvim"
