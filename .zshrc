@@ -12,6 +12,8 @@ PS1='[\u@\h \W]\$ '
 
 # eval "$(starship init zsh)"
 eval "$(lua /usr/share/z.lua/z.lua  --init zsh)"
+eval "$(thefuck --alias fuck)"
+
 
 export TMUX_TMPDIR=~/.tmux
 export PATH=~/.npm-global/bin:$PATH
@@ -84,3 +86,5 @@ source /usr/share/fzf/key-bindings.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+eval $(thefuck --alias)
