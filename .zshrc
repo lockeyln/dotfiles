@@ -13,12 +13,13 @@ PS1='[\u@\h \W]\$ '
 # eval "$(starship init zsh)"
 eval "$(lua /usr/share/z.lua/z.lua  --init zsh)"
 
+export TMUX_TMPDIR=~/.tmux
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.treesitter/tree-sitter:$PATH
+
 # 解决终端中文乱码
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export TMUX_TMPDIR=~/.tmux
 
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
