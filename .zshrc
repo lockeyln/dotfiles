@@ -75,7 +75,6 @@ HISTFILE=~/.zsh_history
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme 
-source /usr/share/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/autojump/autojump.zsh
