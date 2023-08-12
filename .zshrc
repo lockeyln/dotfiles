@@ -18,6 +18,7 @@ eval "$(thefuck --alias fuck)"
 export TMUX_TMPDIR=~/.tmux
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.treesitter/tree-sitter:$PATH
+export PATH=~/.config/emacs/bin:$PATH
 
 # 解决终端中文乱码
 export LC_ALL=en_US.UTF-8
